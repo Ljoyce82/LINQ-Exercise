@@ -13,11 +13,7 @@
 
             IEnumerable<string> longGameNames = games.OrderByDescending(x => x.Length);
 
-            foreach (var game in longGameNames)
-            {
-                Console.WriteLine(game);
-            }
-
+            longGameNames.ToList().ForEach(game => Console.WriteLine(game));
         }
     }
 }
